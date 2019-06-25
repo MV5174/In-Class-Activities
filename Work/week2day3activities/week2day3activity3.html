@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        Body{
+            background-color: darkblue;
+            text-align: center;
+        }
+        .box{
+            background-color: white;
+            width: 200px;
+            display: inline-block;
+        }
+        .centered{
+            text-align: center;
+        }
+        .box1{
+            margin-bottom: 50px;
+        }
+        @media screen and (max-width: 768px){
+            body{
+                background-color: darkcyan;
+            }
+            .box1{
+                float: left;
+            }
+            .box2{
+                
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="centered">
+    <div class="box box1">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod elementum sapien in consectetur. Aenean quis mattis nisi, a tristique ipsum. Pellentesque laoreet odio odio, in ultricies est commodo a. Curabitur in feugiat nisi. Praesent eu molestie mi. Aenean id nunc volutpat, aliquam velit vel, malesuada dui. Etiam sed varius lacus, in dapibus nisi.</p>
+    </div><br>
+    <div class="box box2">
+        <p>Praesent quis dictum diam. Duis a est in velit tristique faucibus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur lacinia lorem at lectus ultrices interdum. Nullam vel congue magna. Duis in ex sodales tortor sagittis fringilla sit amet vel dolor. Mauris non nibh molestie, finibus odio eget, mollis tellus.</p>
+    </div>
+    </div>
+</body>
+</html>

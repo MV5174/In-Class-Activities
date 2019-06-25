@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Rock Paper Scissors Part 2
+  </title>
+</head>
+
+<body>
+
+  <div id="game">
+    <h2> You chose: <span id="guess"></span></h2>
+
+    <h2>Computer Chose: <span id="compGuess"></span></h2>
+
+    <h3>Wins: <span id="win"></span></h3>
+
+    <h3>Losses: <span id="loss"></span></h3>
+
+    <h3>Ties: <span id="ties"></span></h3>
+  </div>
+
+  <script type="text/javascript">
+
+    // Creates an array that lists out all of the options (Rock, Paper, or Scissors).
+    var computerChoices = ["r", "p", "s"];
+
+    var win = 0;
+
+    var loss = 0;
+
+    var ties = 0;
+
+    // This function is run whenever the user presses a key.
+    document.onkeyup = function (event) {
+
+      // Determines which key was pressed.
+      var userGuess = event.key;
+      console.log("userguess " + userGuess);
+      // Randomly chooses a choice from the options array. This is the Computer's guess.
+      var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
+      console.log("computer guess " + computerGuess);
+      // Alerts the key the user pressed (userGuess).
+      document.getElementById("guess").innerHTML = event.key;
+
+      // Alerts the Computer's guess.
+     
+        //paper conitions
+      if (userGuess === "p" && computerGuess === "r") {
+        win++;
+      }// tie condition
+        else if (userGuess === computerGuess ) {
+          ties++;
+        }
+        else if (userGuess ==="p" && computerGuess === "s") {
+          loss++;
+        }
+      
+
+
+        // rock
+
+
+
+
+        //paper
+    console.log("wins " + win);
+    console.log("losses " + loss);
+    console.log("ties " + ties);
+
+
+    //DISPAY TO HTML
+    document.getElementById("win").innerHTML = win;
+    document.getElementById("compGuess").innerHTML = computerGuess
+    ;
+    }
+    
+
+  </script>
+
+</body>
+
+</html>
